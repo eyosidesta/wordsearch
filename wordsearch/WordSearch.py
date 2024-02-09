@@ -27,6 +27,14 @@ class WordSearch:
             self.reserve_index[i] = j
             current_location[i] = j
             return current_location
+        
 
-
+    def same_value_visited(self, reserved_index, i, j):
+        for val in reserved_index:
+            keyFirstList = list(val.keys())[0]
+            valueFirstList = list(val.values())[0]
+            if (keyFirstList == i and valueFirstList == j):
+                return True
+            
+        return False
     
