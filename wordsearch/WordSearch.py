@@ -18,3 +18,15 @@ class WordSearch:
                         return False
                     
         return True
+
+    def get_word_location(self, word, word_index, board, i, j):
+        current_location = {}
+        if(board[i][j] == word[word_index]):
+            if(self.same_value_visited(self.reserve_index, i, j)):
+                self.visited_twice = True
+            self.reserve_index[i] = j
+            current_location[i] = j
+            return current_location
+
+
+    
