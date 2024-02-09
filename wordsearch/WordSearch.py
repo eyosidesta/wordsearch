@@ -38,3 +38,15 @@ class WordSearch:
             
         return False
     
+
+    def check_neighbour(previous, current):
+        previous_key = list(previous.keys())[0]
+        current_key = list(current.keys())[0]
+        previous_value = list(previous.values())[0]
+        current_value = list(current.value())[0]
+
+        if(previous_key - current_key >= -1 and previous_key - current_key <= 1) and (previous_value - current_value >= -1 and previous_value - current_value <= 1):
+            return True
+        else:
+            return False
+        
